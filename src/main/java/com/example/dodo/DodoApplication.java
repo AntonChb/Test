@@ -2,11 +2,10 @@ package com.example.dodo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@RestController
-
+@EnableJpaRepositories
 public class DodoApplication {
 
     public static void main(String[] args) {

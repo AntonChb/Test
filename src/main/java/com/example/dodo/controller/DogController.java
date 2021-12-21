@@ -10,9 +10,7 @@ import java.util.List;
 
 @RestController
 @Controller
-
 public class DogController {
-
 
     @Autowired
     private DogService dogService;
@@ -22,7 +20,7 @@ public class DogController {
         return dogService.findAll();
     }
 
-    @GetMapping(path = "/dogId")
+    @GetMapping(path = "/dogid")
     public Dog dog (@RequestParam Integer id) {
         return dogService.getById(id);
     }
@@ -38,7 +36,7 @@ public class DogController {
     }
 
     @DeleteMapping("/dog")
-    public void deleteDog(@PathVariable Integer id) {
+    public void deleteDog(@RequestParam Integer id) {
         dogService.deleteById(id);
 
     }
