@@ -2,10 +2,7 @@ package com.example.dodo;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Entity
@@ -14,6 +11,7 @@ import javax.persistence.Id;
 @Setter
 @ToString
 @AllArgsConstructor
+@Table(name = "dog")  //** измени большую букву, на маленькую(Называется регистор) в бд. должно заработать и в доге не забуть поправить //
 
 public class Dog {
     @Id

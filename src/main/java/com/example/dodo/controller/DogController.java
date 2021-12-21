@@ -6,17 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @Controller
 
 public class DogController {
 
+
     @Autowired
     private DogService dogService;
 
     @GetMapping(path = "/dog")
-    public Iterable<Dog> getAllDogs(@RequestParam Integer id) {
-        return dogService.find(id);
+    public List<Dog> getAllDogs(/*@RequestParam Integer id*/) {
+        return dogService.findAll();
+    }
+
+    @GetMapping(path = "/dogId")
+    public Dog dog (@RequestParam Integer id) {
+        return dogService.getById(id);
     }
 
     @PostMapping(path = "/dog")
@@ -30,8 +38,8 @@ public class DogController {
     }
 
     @DeleteMapping("/dog")
-    public String deleteDog(@PathVariable Integer id) {//ты когда чтото удаляешь тебе нужен идентификатор его сюда нужно прислать с фронта
+    public void deleteDog(@PathVariable Integer id) {
         dogService.deleteById(id);
-        return "ok";
+
     }
 }
