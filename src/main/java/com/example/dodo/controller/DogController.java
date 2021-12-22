@@ -3,6 +3,7 @@ package com.example.dodo.controller;
 import com.example.dodo.Dog;
 import com.example.dodo.service.DogService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -57,7 +58,7 @@ public class DogController {
             description = "Позволяет удалить собаку"
     )
     @DeleteMapping("/dog")
-    public void deleteDog(@RequestParam Integer id) {
+    public void deleteDog(@Parameter(description = "Удалить собаку по id") @RequestParam Integer id) {
         dogService.deleteById(id);
 
     }
