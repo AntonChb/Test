@@ -20,7 +20,6 @@ public class Dog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-
     @Schema(description = "Идентификатор")
     private Integer id;
 
@@ -32,4 +31,5 @@ public class Dog {
 
     @Schema(description = "Номер клетки собаки")
     private Integer num;
+
 }

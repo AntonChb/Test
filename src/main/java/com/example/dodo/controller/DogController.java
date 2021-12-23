@@ -72,13 +72,8 @@ public class DogController {
         return dogSerImp2.dogList();
     }
 
-    @GetMapping(path = "/dogLis")
-    public Set<String> getAllDogLis() {
-        return dogSerImp2.dogString();
-    }
-
     @GetMapping(path = "/dogL")
-    public Map<String, Integer> getAllDogHash() {
+    public Set<Map.Entry<String, Dog>> getAllDogHash() {
         return dogSerImp2.getHashMap();
     }
 }
