@@ -34,4 +34,5 @@ public class DogServiceImp implements DogService {
     public Dog getById(Integer id) {
         return dogRepository.getById(id);
     }
+
 }

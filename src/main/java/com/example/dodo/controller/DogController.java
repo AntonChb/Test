@@ -1,6 +1,7 @@
 package com.example.dodo.controller;
 
 import com.example.dodo.Dog;
+import com.example.dodo.service.DogSerImp2;
 import com.example.dodo.service.DogService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 @RestController
 @Controller
@@ -16,6 +19,8 @@ public class DogController {
 
     @Autowired
     private DogService dogService;
+    @Autowired
+    private DogSerImp2 dogSerImp2;
 
     @Operation(
             summary = "Вывод всех собак",
@@ -60,6 +65,20 @@ public class DogController {
     @DeleteMapping("/dog")
     public void deleteDog(@Parameter(description = "Удалить собаку по id") @RequestParam Integer id) {
         dogService.deleteById(id);
+    }
 
+    @GetMapping(path = "/dogList")
+    public List<Dog>getAllDogList() {
+        return dogSerImp2.dogList();
+    }
+
+    @GetMapping(path = "/dogLis")
+    public Set<String> getAllDogLis() {
+        return dogSerImp2.dogString();
+    }
+
+    @GetMapping(path = "/dogL")
+    public Map<String, Integer> getAllDogHash() {
+        return dogSerImp2.getHashMap();
     }
 }
