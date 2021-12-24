@@ -16,7 +16,7 @@ import javax.persistence.*;
 @Table(name = "dog")
 @Schema(description = "Сущность пользователя")
 
-public class Dog {
+public class Dog implements Comparable<Dog> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,5 +31,11 @@ public class Dog {
 
     @Schema(description = "Номер клетки собаки")
     private Integer num;
+
+    @Override
+    public int compareTo(Dog d){
+
+        return this.id - d.id;
+    }
 
 }

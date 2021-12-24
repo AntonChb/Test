@@ -6,25 +6,12 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
-public class DogSerImp2 implements Comparable<Dog>{
+public class DogSerImp2 {
 
     Dog dog1 = new Dog(1, "Таня", 33, 877);
     Dog dog2 = new Dog(2, "Ваня", 44, 121);
     Dog dog3 = new Dog(3, "Саня", 55, 456);
 
-    @Override
-    public String toString() {
-        return "DogSerImp2{" +
-                "dog1=" + dog1 +
-                ", dog2=" + dog2 +
-                ", dog3=" + dog3 +
-                  '}';
-    }
-
-    @Override
-    public int compareTo(Dog d){
-        return d.getId();
-    }
 
     public List<Dog> dogList() {
 
