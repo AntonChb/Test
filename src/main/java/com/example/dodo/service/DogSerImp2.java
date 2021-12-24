@@ -6,11 +6,25 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
-public class DogSerImp2 {
+public class DogSerImp2 implements Comparable<Dog>{
 
     Dog dog1 = new Dog(1, "Таня", 33, 877);
     Dog dog2 = new Dog(2, "Ваня", 44, 121);
     Dog dog3 = new Dog(3, "Саня", 55, 456);
+
+    @Override
+    public String toString() {
+        return "DogSerImp2{" +
+                "dog1=" + dog1 +
+                ", dog2=" + dog2 +
+                ", dog3=" + dog3 +
+                  '}';
+    }
+
+    @Override
+    public int compareTo(Dog d){
+        return d.getId();
+    }
 
     public List<Dog> dogList() {
 
@@ -31,8 +45,8 @@ public class DogSerImp2 {
 
         //кладем в мапу
         Map<String, Dog> dogMap = new HashMap<>();
-        dog.forEach(s->{
-            dogMap.put(s.getName(),s);
+        dog.forEach(s -> {
+            dogMap.put(s.getName(), s);
         });
 
         //кладем в дерево
@@ -40,16 +54,15 @@ public class DogSerImp2 {
         for (Map.Entry<String, Dog> entry : dogMap.entrySet()) {
             dogTreeSet.add(entry.getValue());
         }
-
         //Чистим лист и перекладываем из дерево в лист
-       // dog.clear();
-        dogTreeSet.forEach(s->{
+         dog.clear();
+        dogTreeSet.forEach(s -> {
             dog.add(s);
         });
-
-        //все
-
-            return null;
-
+        for (Object o : dogTreeSet) {
+            //все
+            System.out.println(o);
         }
+        return null;
+    }
 }
