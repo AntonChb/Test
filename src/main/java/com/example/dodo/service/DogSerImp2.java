@@ -12,16 +12,15 @@ public class DogSerImp2 {
     Dog dog2 = new Dog(2, "Ваня", 44, 121);
     Dog dog3 = new Dog(3, "Саня", 55, 456);
 
-
-    public List<Dog> dogList() {
-
-        List<Dog> dog = new ArrayList<>();
-        dog.add(dog1);
-        dog.add(dog2);
-        dog.add(dog3);
-
-        return dog;
-    }
+//    public List<Dog> dogList() {
+//
+//        List<Dog> dog = new ArrayList<>();
+//        dog.add(dog1);
+//        dog.add(dog2);
+//        dog.add(dog3);
+//
+//        return dog;
+//    }
 
     public Set<Map.Entry<String, Dog>> getHashMap() {
         //кладем в лист

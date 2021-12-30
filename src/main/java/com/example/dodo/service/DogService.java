@@ -1,9 +1,7 @@
 package com.example.dodo.service;
 
 import com.example.dodo.Dog;
-
 import java.util.List;
-
 
 public interface DogService {
 

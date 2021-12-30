@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -65,11 +64,6 @@ public class DogController {
     @DeleteMapping("/dog")
     public void deleteDog(@Parameter(description = "Удалить собаку по id") @RequestParam Integer id) {
         dogService.deleteById(id);
-    }
-
-    @GetMapping(path = "/dogList")
-    public List<Dog>getAllDogList() {
-        return dogSerImp2.dogList();
     }
 
     @GetMapping(path = "/dogL")

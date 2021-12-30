@@ -1,8 +1,8 @@
 package com.example.dodo;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
-
 import javax.persistence.*;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
@@ -16,6 +16,13 @@ import javax.persistence.*;
 @Schema(description = "Дом")
 
 public class Home {
+
+    private Personal user;
+
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "id")
+    public Personal getUser() {
+        return user;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
