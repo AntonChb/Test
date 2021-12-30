@@ -17,10 +17,9 @@ import javax.persistence.*;
 
 public class Personal {
 
-//    @OneToOne
-//    @JoinColumn(name = "home_id")
-//    private Home home;
-//
+    @OneToOne(mappedBy = "user_id", cascade = CascadeType.ALL)
+    private Home home;
+
 ////    @OneToOne
 ////    @JoinColumn(name = "home_id", referencedColumnName = "home_id")
 ////    public Home getHome() {

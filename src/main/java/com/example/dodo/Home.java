@@ -17,13 +17,13 @@ import javax.persistence.*;
 
 public class Home {
 
-//    @OneToOne
-//    @JoinColumn(name = "id")
-//    private Personal user;
-//
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id")
+    private Personal personal;
+
 ////    @OneToOne(cascade = CascadeType.ALL, mappedBy = "id")
 ////    public Personal getUser() {
-////        return user;
+////        return personal;
 ////    }
 
     @Id
@@ -36,5 +36,8 @@ public class Home {
 
     @Schema(description = "Номер дома")
     private Integer homenum;
+
+    @Schema(description = "ID Пользователя")
+    private Integer user_id;
 
 }
