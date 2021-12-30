@@ -17,13 +17,15 @@ import javax.persistence.*;
 
 public class Personal {
 
-    private Home home;
-
-    @OneToOne
-    @JoinColumn(name = "home_id", referencedColumnName = "home_id")
-    public Home getHome() {
-        return this.home;
-    }
+//    @OneToOne
+//    @JoinColumn(name = "home_id")
+//    private Home home;
+//
+////    @OneToOne
+////    @JoinColumn(name = "home_id", referencedColumnName = "home_id")
+////    public Home getHome() {
+////        return this.home;
+////    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

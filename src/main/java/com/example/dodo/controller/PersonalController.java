@@ -21,6 +21,7 @@ public class PersonalController {
             summary = "Вывод всех пользователей",
             description = "Позволяет получить весь список пользователей"
     )
+
     @GetMapping(path = "/personal")
     public List<Personal> getAllPers() {
         return personalService.findAll();

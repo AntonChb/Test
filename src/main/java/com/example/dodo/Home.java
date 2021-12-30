@@ -17,12 +17,14 @@ import javax.persistence.*;
 
 public class Home {
 
-    private Personal user;
-
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "id")
-    public Personal getUser() {
-        return user;
-    }
+//    @OneToOne
+//    @JoinColumn(name = "id")
+//    private Personal user;
+//
+////    @OneToOne(cascade = CascadeType.ALL, mappedBy = "id")
+////    public Personal getUser() {
+////        return user;
+////    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
