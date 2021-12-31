@@ -17,8 +17,11 @@ import javax.persistence.*;
 
 public class Personal {
 
-    @OneToOne(mappedBy = "user_id", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "personal", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
     private Home home;
+
 
 ////    @OneToOne
 ////    @JoinColumn(name = "home_id", referencedColumnName = "home_id")
@@ -29,6 +32,7 @@ public class Personal {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "Идентификатор")
+    @Column(name="id")
     private Integer id;
 
     @Schema(description = "Имя пользователя")

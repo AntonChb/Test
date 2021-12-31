@@ -17,18 +17,15 @@ import javax.persistence.*;
 
 public class Home {
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
+    @OneToOne
+    @MapsId
+    @JoinColumn(name = "home")
     private Personal personal;
-
-////    @OneToOne(cascade = CascadeType.ALL, mappedBy = "id")
-////    public Personal getUser() {
-////        return personal;
-////    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "Идентификатор")
+    @Column(name="id")
     private Integer id;
 
     @Schema(description = "Название улицы")
