@@ -1,5 +1,6 @@
 package com.example.dodo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
@@ -17,11 +18,6 @@ import javax.persistence.*;
 
 public class Home {
 
-    @OneToOne
-    @MapsId
-    @JoinColumn(name = "home")
-    private Personal personal;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "Идентификатор")
@@ -32,9 +28,13 @@ public class Home {
     private String street;
 
     @Schema(description = "Номер дома")
-    private Integer homenum;
+    private Integer home;
 
     @Schema(description = "ID Пользователя")
     private Integer user_id;
+
+    @JsonIgnore
+    @OneToOne(mappedBy = "home")
+    private Personal personal;
 
 }

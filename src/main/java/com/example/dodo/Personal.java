@@ -17,18 +17,6 @@ import javax.persistence.*;
 
 public class Personal {
 
-    @OneToOne(mappedBy = "personal", cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
-    private Home home;
-
-
-////    @OneToOne
-////    @JoinColumn(name = "home_id", referencedColumnName = "home_id")
-////    public Home getHome() {
-////        return this.home;
-////    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Schema(description = "Идентификатор")
@@ -40,5 +28,9 @@ public class Personal {
 
     @Schema(description = "Возраст пользователя")
     private Integer age;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "home_id", referencedColumnName = "id")
+    private Home home;
 
 }
