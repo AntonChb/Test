@@ -1,7 +1,7 @@
 package com.example.dodo.controller;
 
-import com.example.dodo.Dog;
-import com.example.dodo.service.DogSerImp2;
+import com.example.dodo.models.Dog;
+//import com.example.dodo.service.DogSerImp2;
 import com.example.dodo.service.DogService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -18,8 +18,8 @@ public class DogController {
 
     @Autowired
     private DogService dogService;
-    @Autowired
-    private DogSerImp2 dogSerImp2;
+//    @Autowired
+//    private DogSerImp2 dogSerImp2;
 
     @Operation(
             summary = "Вывод всех собак",
@@ -66,8 +66,8 @@ public class DogController {
         dogService.deleteById(id);
     }
 
-    @GetMapping(path = "/dogL")
-    public Set<Map.Entry<String, Dog>> getAllDogHash() {
-        return dogSerImp2.getHashMap();
-    }
+//    @GetMapping(path = "/dogL")
+//    public Set<Map.Entry<String, Dog>> getAllDogHash() {
+//        return dogSerImp2.getHashMap();
+//    }
 }

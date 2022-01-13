@@ -1,6 +1,6 @@
 package com.example.dodo.service;
 
-import com.example.dodo.Home;
+import com.example.dodo.models.Home;
 import com.example.dodo.repository.HomeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

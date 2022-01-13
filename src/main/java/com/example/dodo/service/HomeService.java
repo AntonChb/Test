@@ -1,6 +1,6 @@
 package com.example.dodo.service;
 
-import com.example.dodo.Home;
+import com.example.dodo.models.Home;
 
 import java.util.List;
 

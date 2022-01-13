@@ -1,16 +1,19 @@
-package com.example.dodo;
+package com.example.dodo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
 @AllArgsConstructor
 @Table(name = "personal")
 @Schema(description = "Пользователи")
@@ -32,5 +35,9 @@ public class Personal {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "home_id", referencedColumnName = "id")
     private Home home;
+
+    @OneToMany
+    @JoinColumn(name = "personal_id")
+    private Set<Dog> dog;
 
 }

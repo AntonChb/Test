@@ -1,6 +1,6 @@
 package com.example.dodo.controller;
 
-import com.example.dodo.Personal;
+import com.example.dodo.models.Personal;
 import com.example.dodo.service.PersonalService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

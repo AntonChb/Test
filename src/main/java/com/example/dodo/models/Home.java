@@ -1,10 +1,12 @@
-package com.example.dodo;
+package com.example.dodo.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
@@ -33,8 +35,8 @@ public class Home {
     @Schema(description = "ID Пользователя")
     private Integer user_id;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "home")
-    private Personal personal;
+//    @JsonIgnore
+//    @OneToOne(mappedBy = "home")
+//    private Personal personal;
 
 }

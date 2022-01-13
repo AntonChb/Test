@@ -1,6 +1,6 @@
 package com.example.dodo.repository;
 
-import com.example.dodo.Dog;
+import com.example.dodo.models.Dog;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
