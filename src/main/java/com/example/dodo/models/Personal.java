@@ -40,4 +40,11 @@ public class Personal {
     @JoinColumn(name = "personal_id")
     private Set<Dog> dog;
 
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "personal_lakes",
+            joinColumns = @JoinColumn(name = "pers_id"),
+            inverseJoinColumns = @JoinColumn(name = "lake_id")
+    )
+    private Set<Lakes> lakes;
+
 }
