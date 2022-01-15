@@ -35,8 +35,8 @@ public class Home {
     @Schema(description = "ID Пользователя")
     private Integer user_id;
 
-//    @JsonIgnore
-//    @OneToOne(mappedBy = "home")
-//    private Personal personal;
+    @JsonIgnore
+    @OneToOne(mappedBy = "home")
+    private Personal personal;
 
 }
