@@ -1,5 +1,6 @@
 package com.example.dodo.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
@@ -37,8 +38,9 @@ public class Dog implements Comparable<Dog> {
         return this.id - d.id;
     }
 
-//    @ManyToOne
-//    @JoinColumn(name = "id", insertable = false, updatable = false)
-//    private Personal personal;
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "personal_id", nullable = false)
+    private Personal personal;
 
 }

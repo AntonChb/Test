@@ -27,8 +27,8 @@ public class Lakes {
     @Schema(description = "Название озера")
     private String name;
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "lakes")
-    private List<Personal> personal;
+//    @JsonIgnore
+//    @ManyToMany(mappedBy = "lakes")
+//    private List<Personal> personal;
 
 }

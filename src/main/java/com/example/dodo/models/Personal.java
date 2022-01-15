@@ -32,19 +32,18 @@ public class Personal {
     @Schema(description = "Возраст пользователя")
     private Integer age;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "home_id", referencedColumnName = "id")
-    private Home home;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "home_id", referencedColumnName = "id")
+//    private Home home;
 
-    @OneToMany
-    @JoinColumn(name = "personal_id")
+    @OneToMany (mappedBy = "personal")
     private Set<Dog> dog;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "personal_lakes",
-            joinColumns = @JoinColumn(name = "pers_id"),
-            inverseJoinColumns = @JoinColumn(name = "lake_id")
-    )
-    private Set<Lakes> lakes;
+//    @ManyToMany(fetch = FetchType.EAGER)
+//    @JoinTable(name = "personal_lakes",
+//            joinColumns = @JoinColumn(name = "pers_id"),
+//            inverseJoinColumns = @JoinColumn(name = "lake_id")
+//    )
+//    private Set<Lakes> lakes;
 
 }
