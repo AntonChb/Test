@@ -26,7 +26,8 @@ public class DogController {
             description = "Позволяет оплучить весь список собак"
     )
     @GetMapping(path = "/dog")
-    public List<Dog> getAllDogs(/*@RequestParam Integer id*/) {
+    public List<Dog> getAllDogs()
+    {
         return dogService.findAll();
     }
 
@@ -66,8 +67,12 @@ public class DogController {
         dogService.deleteById(id);
     }
 
-//    @GetMapping(path = "/dogL")
-//    public Set<Map.Entry<String, Dog>> getAllDogHash() {
-//        return dogSerImp2.getHashMap();
-//    }
+    @Operation(
+            summary = "Вывод собак с новыми именами",
+            description = "Собаки с измененными именами"
+    )
+    @GetMapping(path = "/dognn")
+    public List<Dog> findByName (@RequestParam (name = "name", required = false) String name) {
+        return DogService.findByName(name);
+    }
 }
