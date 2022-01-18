@@ -35,4 +35,11 @@ public class DogServiceImp implements DogService {
         return dogRepository.getById(id);
     }
 
+    @Override
+    public List <String> findByName(String name) {return dogRepository.f(name);
+    }
+
+
+
+
 }

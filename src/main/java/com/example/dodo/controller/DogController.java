@@ -1,16 +1,16 @@
 package com.example.dodo.controller;
 
 import com.example.dodo.models.Dog;
-//import com.example.dodo.service.DogSerImp2;
 import com.example.dodo.service.DogService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
+
+//import com.example.dodo.service.DogSerImp2;
 
 @RestController
 @Controller
@@ -18,7 +18,8 @@ public class DogController {
 
     @Autowired
     private DogService dogService;
-//    @Autowired
+
+    //    @Autowired
 //    private DogSerImp2 dogSerImp2;
 
     @Operation(
@@ -26,8 +27,7 @@ public class DogController {
             description = "Позволяет оплучить весь список собак"
     )
     @GetMapping(path = "/dog")
-    public List<Dog> getAllDogs()
-    {
+    public List<Dog> getAllDogs() {
         return dogService.findAll();
     }
 
@@ -36,7 +36,7 @@ public class DogController {
             description = "Позволяет оплучить собаку по id"
     )
     @GetMapping(path = "/dogid")
-    public Dog dog (@RequestParam Integer id) {
+    public Dog dog(@RequestParam Integer id) {
         return dogService.getById(id);
     }
 
@@ -72,7 +72,7 @@ public class DogController {
             description = "Собаки с измененными именами"
     )
     @GetMapping(path = "/dognn")
-    public List<Dog> findByName (@RequestParam (name = "name", required = false) String name) {
-        return DogService.findByName(name);
+    public List<String> findByName(@RequestParam(name = "name", required = false) String name) {
+        return dogService.findByName(name);
     }
 }
