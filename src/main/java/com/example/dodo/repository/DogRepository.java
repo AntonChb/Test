@@ -12,15 +12,7 @@ import java.util.List;
 public interface DogRepository extends JpaRepository<Dog, Integer> {
 
     @Modifying
-    @Query(value = "UPDATE dog SET name = 'sad' WHERE name = 'Шарик'", nativeQuery = true)
+    @Query(value = "UPDATE dog SET name = 'СТАРЫЙ' WHERE age>10", nativeQuery = true)
     List <String> f(String name);
-
-//    @Modifying
-//    @Query("UPDATE Note n SET n.title = ?1 WHERE n.id = ?2")
-//    int updateTitleById(String title, Long id);
-
-//    UPDATE FamilyMembers
-//    SET member_name='Andie Anthony'
-//    WHERE member_name='Andie Quincey';
 
 }
