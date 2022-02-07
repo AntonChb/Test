@@ -19,8 +19,6 @@ public class DogController {
     @Autowired
     private DogService dogService;
 
-    //    @Autowired
-//    private DogSerImp2 dogSerImp2;
 
     @Operation(
             summary = "Вывод всех собак",

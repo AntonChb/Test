@@ -19,7 +19,7 @@ import javax.persistence.*;
 public class Dog implements Comparable<Dog> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Идентификатор")
     private Integer id;
 

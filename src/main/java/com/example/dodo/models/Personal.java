@@ -36,7 +36,7 @@ public class Personal {
     @JoinColumn(name = "home_id", referencedColumnName = "id")
     private Home home;
 
-    @OneToMany (mappedBy = "personal", fetch = FetchType.LAZY)
+    @OneToMany (mappedBy = "personal", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Dog> dog;
 
     @ManyToMany(fetch = FetchType.LAZY)

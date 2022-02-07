@@ -27,7 +27,6 @@ public class DogServiceImp implements DogService {
     @Override
     public void deleteById(Integer id) {
         dogRepository.deleteById(id);
-
     }
 
     @Override
@@ -38,8 +37,4 @@ public class DogServiceImp implements DogService {
     @Override
     public List <String> findByName(String name) {return dogRepository.f(name);
     }
-
-
-
-
 }
