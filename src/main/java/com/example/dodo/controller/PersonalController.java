@@ -62,4 +62,10 @@ public class PersonalController {
     public void deleteUser(@Parameter(description = "Удалить пользователя по id") @RequestParam Integer id) {
         personalService.deleteById(id);
     }
+    @PostMapping(path = "/personal2")
+    public Personal doTransaction (@RequestBody Personal personal) {
+        return personalService.save(personal);
+    }
+
+
 }

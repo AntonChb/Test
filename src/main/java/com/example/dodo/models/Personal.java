@@ -46,4 +46,6 @@ public class Personal {
     )
     private Set<Lakes> lakes;
 
+    public void setName(String created) {
+    }
 }
