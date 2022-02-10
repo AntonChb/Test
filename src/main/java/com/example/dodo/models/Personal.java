@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import javax.persistence.*;
+import javax.servlet.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -18,7 +20,7 @@ import java.util.Set;
 @Table(name = "personal")
 @Schema(description = "Пользователи")
 
-public class Personal {
+public class Personal implements Filter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -47,5 +49,10 @@ public class Personal {
     private Set<Lakes> lakes;
 
     public void setName(String created) {
+    }
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+
     }
 }
