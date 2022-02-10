@@ -2,10 +2,8 @@ package com.example.dodo.service;
 
 import com.example.dodo.models.Personal;
 import com.example.dodo.repository.PersonalRepository;
-import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import sun.security.ssl.Record;
 
 import javax.transaction.Transactional;
 import java.util.List;
