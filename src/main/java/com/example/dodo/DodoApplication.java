@@ -1,5 +1,6 @@
 package com.example.dodo;
 
+import com.example.dodo.controller.Controller;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -11,5 +12,9 @@ public class DodoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DodoApplication.class, args);
+
+        Controller controller = new Controller();
+        controller.mm();
+
     }
 }

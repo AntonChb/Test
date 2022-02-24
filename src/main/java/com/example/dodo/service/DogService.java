@@ -4,7 +4,6 @@ import com.example.dodo.models.Dog;
 
 import java.util.List;
 
-
 public interface DogService {
 
     List<Dog> findAll();

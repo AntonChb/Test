@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -18,7 +19,6 @@ public class DogController {
 
     @Autowired
     private DogService dogService;
-
 
     @Operation(
             summary = "Вывод всех собак",
@@ -36,6 +36,26 @@ public class DogController {
     @GetMapping(path = "/dogid")
     public Dog dog(@RequestParam Integer id) {
         return dogService.getById(id);
+    }
+
+    @GetMapping(path = "/dogid1")
+    public Dog dog() {
+        return dogService.getById(1);
+    }
+
+    @GetMapping(path = "/st")
+    public String getString() {
+        return "Lololo";
+    }
+
+
+    @GetMapping(path = "/getst2")
+    public String getSt() {
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        String st2 = restTemplate.getForObject("http://localhost:8081//st2", String.class);
+        return st2;
     }
 
     @Operation(

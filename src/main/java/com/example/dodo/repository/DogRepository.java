@@ -12,7 +12,7 @@ import java.util.List;
 public interface DogRepository extends JpaRepository<Dog, Integer> {
 
     @Modifying
-    @Query(value = "UPDATE dog SET name = 'СТАРЫЙ' WHERE age>10", nativeQuery = true)
+    @Query(value = "UPDATE dog SET name = 'СТАРЫЙ' WHERE age>5", nativeQuery = true)
     List <String> f(String name);
 
 }
