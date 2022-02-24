@@ -1,0 +1,113 @@
+databaseChangeLog:
+  - logicalFilePath: db.changelog-yaml-example.v4.yaml
+  - changeSet:
+      id: 4
+      author: Ant
+      comment: "Создаю personal"
+      changes:
+        - createTable:
+            tableName: personal
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: age
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: home_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 4.1
+      author: Ant
+      comment: "Вношу данные в personal"
+      changes:
+        - insert:
+            tableName: personal
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Витя"
+              - column:
+                  name: age
+                  value: 35
+              - column:
+                  name: home_id
+                  value: 1
+        - insert:
+            tableName: personal
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Коля"
+              - column:
+                  name: age
+                  value: 62
+              - column:
+                  name: home_id
+                  value: 2
+        - insert:
+            tableName: personal
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: "Герасим"
+              - column:
+                  name: age
+                  value: 98
+              - column:
+                  name: home_id
+                  value: 3
+        - insert:
+            tableName: personal
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: "Толя"
+              - column:
+                  name: age
+                  value: 22
+              - column:
+                  name: home_id
+                  value: 4
+        - insert:
+            tableName: personal
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: "Саня"
+              - column:
+                  name: age
+                  value: 18
+              - column:
+                  name: home_id
+                  value: 5

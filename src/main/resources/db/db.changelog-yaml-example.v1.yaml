@@ -1,0 +1,133 @@
+databaseChangeLog:
+  - logicalFilePath: db.changelog-yaml-example.v1.yaml
+  - changeSet:
+      id: 1
+      author: Ant
+      comment: "Создаю таблицу dog"
+      changes:
+        - createTable:
+            tableName: dog
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: age
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: num
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: personal_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 1.1
+      author: Ant
+      comment: "Вношу данные в dog"
+      changes:
+        - insert:
+            tableName: dog
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Шарик"
+              - column:
+                  name: age
+                  value: 5
+              - column:
+                  name: num
+                  value: 987
+              - column:
+                  name: personal_id
+                  value: 1
+        - insert:
+            tableName: dog
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Бобик"
+              - column:
+                  name: age
+                  value: 8
+              - column:
+                  name: num
+                  value: 465
+              - column:
+                  name: personal_id
+                  value: 2
+        - insert:
+            tableName: dog
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: "Тузик"
+              - column:
+                  name: age
+                  value: 6
+              - column:
+                  name: num
+                  value: 825
+              - column:
+                  name: personal_id
+                  value: 3
+        - insert:
+            tableName: dog
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: "Лелик"
+              - column:
+                  name: age
+                  value: 1
+              - column:
+                  name: num
+                  value: 324
+              - column:
+                  name: personal_id
+                  value: 4
+        - insert:
+            tableName: dog
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: "Болик"
+              - column:
+                  name: age
+                  value: 7
+              - column:
+                  name: num
+                  value: 239
+              - column:
+                  name: personal_id
+                  value: 5

@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/db.changelog-yaml-example.v1.yaml
+  - include:
+      file: db/db.changelog-yaml-example.v2.yaml
+  - include:
+      file: db/db.changelog-yaml-example.v3.yaml
+  - include:
+      file: db/db.changelog-yaml-example.v4.yaml
+  - include:
+      file: db/db.changelog-yaml-example.v5.yaml

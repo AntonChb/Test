@@ -1,0 +1,113 @@
+databaseChangeLog:
+  - logicalFilePath: db.changelog-yaml-example.v2.yaml
+  - changeSet:
+      id: 2
+      author: Ant
+      comment: "Создаю таблицы home"
+      changes:
+        - createTable:
+            tableName: home
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: street
+                  type: varchar(50)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: home
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2.1
+      author: Ant
+      comment: "Вношу данные в home"
+      changes:
+        - insert:
+            tableName: home
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: street
+                  value: "Первая"
+              - column:
+                  name: home
+                  value: 357
+              - column:
+                  name: user_id
+                  value: 1
+        - insert:
+            tableName: home
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: street
+                  value: "Вторая"
+              - column:
+                  name: home
+                  value: 114
+              - column:
+                  name: user_id
+                  value: 2
+        - insert:
+            tableName: home
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: street
+                  value: "Третья"
+              - column:
+                  name: home
+                  value: 69
+              - column:
+                  name: user_id
+                  value: 3
+        - insert:
+            tableName: home
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: street
+                  value: "Четвертая"
+              - column:
+                  name: home
+                  value: 447
+              - column:
+                  name: user_id
+                  value: 4
+        - insert:
+            tableName: home
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: street
+                  value: "Пятая"
+              - column:
+                  name: home
+                  value: 73
+              - column:
+                  name: user_id
+                  value: 5

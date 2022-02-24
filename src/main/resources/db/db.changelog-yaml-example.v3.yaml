@@ -1,0 +1,109 @@
+databaseChangeLog:
+  - logicalFilePath: db.changelog-yaml-example.v3.yaml
+  - changeSet:
+      id: 3
+      author: Ant
+      comment: "Создаю lakes"
+      changes:
+        - createTable:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    unique: true
+                    nullable: false
+  - changeSet:
+      id: 3.1
+      author: Ant
+      comment: "Вношу данные в lakes"
+      changes:
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Круглое"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: "Соленое"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: "Зеленое"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: "Боровое"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: name
+                  value: "Щучье"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: name
+                  value: "Шестое"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 7
+              - column:
+                  name: name
+                  value: "Байкал"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 8
+              - column:
+                  name: name
+                  value: "Аша"
+        - insert:
+            tableName: lakes
+            columns:
+              - column:
+                  name: id
+                  value: 9
+              - column:
+                  name: name
+                  value: "Квадратное"

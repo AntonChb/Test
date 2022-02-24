@@ -1,0 +1,164 @@
+databaseChangeLog:
+  - logicalFilePath: db.changelog-yaml-example.v5.yaml
+  - changeSet:
+      id: 5
+      author: Ant
+      comment: "Создаю personal_lakes"
+      changes:
+        - createTable:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: lake_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+  - changeSet:
+      id: 5.1
+      author: Ant
+      comment: "Вношу данные в personal_lakes"
+      changes:
+        - insert:
+            tableName: personal_lakes
+            columns:
+                 - column:
+                     name: pers_id
+                     value: 1
+                 - column:
+                     name: lake_id
+                     value: 1
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 2
+              - column:
+                  name: lake_id
+                  value: 2
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 3
+              - column:
+                  name: lake_id
+                  value: 3
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 4
+              - column:
+                  name: lake_id
+                  value: 4
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 5
+              - column:
+                  name: lake_id
+                  value: 5
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 1
+              - column:
+                  name: lake_id
+                  value: 6
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 2
+              - column:
+                  name: lake_id
+                  value: 7
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 3
+              - column:
+                  name: lake_id
+                  value: 8
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 4
+              - column:
+                  name: lake_id
+                  value: 9
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 5
+              - column:
+                  name: lake_id
+                  value: 1
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 1
+              - column:
+                  name: lake_id
+                  value: 2
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 2
+              - column:
+                  name: lake_id
+                  value: 3
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 3
+              - column:
+                  name: lake_id
+                  value: 4
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 4
+              - column:
+                  name: lake_id
+                  value: 5
+        - insert:
+            tableName: personal_lakes
+            columns:
+              - column:
+                  name: pers_id
+                  value: 5
+              - column:
+                  name: lake_id
+                  value: 6
