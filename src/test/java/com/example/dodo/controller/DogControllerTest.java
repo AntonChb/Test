@@ -2,7 +2,7 @@ package com.example.dodo.controller;
 
 import com.example.dodo.models.Dog;
 import com.example.dodo.service.DogService;
-import com.example.dodo.service.DogServiceImp;
+import com.example.dodo.service.serviceImp.DogServiceImp;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

@@ -19,14 +19,12 @@ import javax.persistence.*;
 public class Ar {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Идентификатор")
     private Integer id;
 
     @Schema(description = "Имя")
-    private Integer arraysInt;
+    private Integer arrays_int;
 
-    public Ar(Integer s) {
-        arraysInt = s;
-    }
+    public Ar(Integer s) {arrays_int = s;}
 }

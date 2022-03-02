@@ -1,7 +1,8 @@
-package com.example.dodo.service;
+package com.example.dodo.service.serviceImp;
 
 import com.example.dodo.models.Dog;
 import com.example.dodo.repository.DogRepository;
+import com.example.dodo.service.DogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

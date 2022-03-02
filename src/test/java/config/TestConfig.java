@@ -1,7 +1,7 @@
 package config;
 
 import com.example.dodo.service.DogService;
-import com.example.dodo.service.DogServiceImp;
+import com.example.dodo.service.serviceImp.DogServiceImp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
