@@ -28,3 +28,4 @@ public class Ar {
 
     public Ar(Integer s) {arrays_int = s;}
 }
+
