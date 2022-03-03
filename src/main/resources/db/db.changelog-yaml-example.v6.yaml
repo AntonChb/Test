@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - logicalFilePath: db.changelog-yaml-example.v6.yaml
+  - changeSet:
+      id: 7
+      author: Anton
+      comment: "Создаю ar"
+      changes:
+        - createTable:
+            tableName: ar
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+              - column:
+                  name: arrays_int
+                  type: BIGINT
