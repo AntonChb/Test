@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 @Entity
@@ -23,9 +24,7 @@ public class Dog implements Comparable<Dog> {
     @Schema(description = "Идентификатор")
     private Integer id;
 
-    @Schema(description = "Имя собаки")
-    private String name;
-
+    // @Min(value = 1)
     @Schema(description = "Возраст собаки")
     private Integer age;
 

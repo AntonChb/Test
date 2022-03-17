@@ -15,4 +15,10 @@ public interface DogRepository extends JpaRepository<Dog, Integer> {
     @Query(value = "UPDATE dog SET name = 'СТАРЫЙ' WHERE age>5", nativeQuery = true)
     List <String> f(String name);
 
+    @Query(value = "SELECT age FROM DOG WHERE id=1", nativeQuery = true)
+    Integer a();
+
+
+
+
 }

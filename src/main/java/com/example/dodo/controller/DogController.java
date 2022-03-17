@@ -93,4 +93,7 @@ public class DogController {
     public List<String> findByName(@RequestParam(name = "name", required = false) String name) {
         return dogService.findByName(name);
     }
+    public String s(){
+        return "qqq";
+    }
 }
